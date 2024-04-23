@@ -1,0 +1,17 @@
+{
+  "name": "modal-track-2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch app/styles/index.scss public/css/styles.css",
+    "pug": "pug -w --pretty app/templates/index.pug -o public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^3.0.2",
+    "sass": "^1.75.0"
+  }
+}

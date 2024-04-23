@@ -1,0 +1,77 @@
+.mt-hero {
+  padding: 35px 0;
+}
+
+.mt-hero__title {
+  @include font-rem(50px);
+  font-family: 'Inter', sans-serif;
+  font-weight:  700;
+  margin-bottom: 30px;
+}
+
+.mt-hero__caption {
+  display: none;
+}
+
+.mt-hero__image {
+  content: url(../assets/images/hero/hero-mobile.png);
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: -20px auto 40px;
+}
+
+@include media-query(medium) {
+  .mt-hero {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-image: url('../assets/images/hero/hero-bg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+  }
+
+  .mt-hero__title {
+    @include font-rem(30px);
+  }
+
+  .mt-hero__image {
+    max-width: 350px;
+  }
+
+  .mt-hero__caption {
+    display: block;
+    @include font-rem(16px);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+}
+
+@include media-query(large) {
+  .mt-hero {
+    padding: 100px 0 80px;
+  }
+
+  .mt-hero__header {
+    width: 60%;
+    max-width: 600px;
+  }
+
+  .mt-hero__image {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    max-width: initial;
+    content: url(../assets/images/hero/hero-desktop.png);
+  }
+
+  .mt-hero__title {
+    @include font-rem(60px);
+  }
+
+  .mt-hero__caption {
+    @include font-rem(20px);
+  }
+}

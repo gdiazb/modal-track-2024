@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+@import './utils/mix/mix-mediaquery.scss';
+@import './utils/mix/mix-font-rem.scss';
+@import './utils/var/var-typo.scss';
+@import './utils/var/var-breakpoint.scss';
+@import './utils/var/var-font.scss';
+@import './utils/var/var-color.scss';
+
+@import './utils/_variables.scss';
+
+@import './utils/generic/font-face.scss';
+
+@import './normalize.scss';
+
+@import './elements/_buttons.scss';
+
+@import './components/_header.scss';
+@import './components/_footer.scss';
+@import './components/_hero.scss';
+@import './components/_cta.scss';
+@import './components/_services.scss';
+
+.layout {
+  width: 90%;
+  margin: 0 auto;
+}

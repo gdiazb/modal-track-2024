@@ -1,0 +1,41 @@
+.mt-btn {
+  @include font-rem(14px);
+  display: inline-block;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight:  500;
+  padding: calculateRem(7px) calculateRem(30px);
+  min-width: 224px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: $primary-color;
+  color: $white;
+  line-height: 1.7;
+  border: 1px solid transparent;
+  transition: all ease 0.3s;
+
+  &:hover {
+    background-color: $primary-color-hover;
+    border: 1px solid $primary-color;
+  }
+}
+
+.mt-btn--secondary {
+  background-color: $white;
+  color: $primary-color;
+
+  &:hover {
+    background-color: $white-hover;
+    border: 1px solid $white-hover;
+  }
+}
+
+@include media-query(wide) {
+  .mt-btn {
+    @include font-rem(16px);
+    padding: calculateRem(13px) calculateRem(30px);
+    min-width: calculateRem(225px)
+  }
+}

@@ -1,0 +1,20 @@
+.mt-cta {
+  background-color: $primary-color;
+  color: $white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.mt-cta__title {
+  font-family: $font-secondary;
+  font-weight: 700;
+  @include font-rem(24px);
+  margin-bottom: 20px;
+}
+
+@include media-query(wide) {
+  .mt-cta__title {
+    @include font-rem(30px);
+    margin-bottom: 16px;
+  }
+}

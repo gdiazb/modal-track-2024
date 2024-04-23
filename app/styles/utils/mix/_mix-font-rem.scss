@@ -1,0 +1,25 @@
+//*----------------------------------------------------*\
+    // Converter pixels (px) to (rem) with Fallback
+//*----------------------------------------------------*/
+
+// Font size: Convierte el valor de px a rem, agrega fallback
+// en px para navegadores antiguos
+// use: .foo {
+//			  @include font-rem(32px);
+//		  }
+@use "sass:math";
+
+@function calculateRem($size) {
+  $remSize: math.div($size, 16px); // 3
+  @return #{$remSize}rem;
+}
+
+@mixin font-rem($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin letter-spacing($size)  {
+  letter-spacing: $size; //Fallback in px
+  letter-spacing: calculateRem($size);
+}
