@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap');
 
 @import './utils/mix/mix-mediaquery.scss';
 @import './utils/mix/mix-font-rem.scss';
@@ -21,6 +21,7 @@
 @import './components/_hero.scss';
 @import './components/_cta.scss';
 @import './components/_services.scss';
+@import './components/_people.scss';
 
 .layout {
   width: 90%;

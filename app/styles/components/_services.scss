@@ -1,5 +1,5 @@
 .mt-services {
-  padding: calculateRem(30px) 0 calculateRem(40px);
+  padding: calculateRem(20px) 0 calculateRem(20px);
 }
 
 .mt-services__img {
@@ -20,6 +20,7 @@
   .mt-services {
     display: flex;
     align-items: center;
+    padding: calculateRem(40px) 0 calculateRem(40px);
   }
 
   .mt-services__img {

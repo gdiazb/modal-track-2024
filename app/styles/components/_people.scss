@@ -1,0 +1,66 @@
+.mt-people {
+  position: relative;
+  padding: calculateRem(20px) 0 calculateRem(20px);
+
+  .mt-btn {
+    margin: 0 auto;
+  }
+}
+
+.mt-people__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  width: 90%;
+  max-width: calculateRem(860px);
+}
+
+.mt-people__img {
+  display: block;
+  width: 100%;
+  height: calculateRem(340px);
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mt-people__title {
+  display: inline-block;
+  @include font-rem(28px);
+  font-weight:  $font-w-bold;
+  margin-bottom: calculateRem(10px);
+  color: $c-white;
+  padding: 0 calculateRem(8px);
+  background-color: $c-black-opacity;
+}
+
+.mt-people__text {
+  display: inline-block;
+  @include font-rem(16px);
+  padding: 0 calculateRem(8px);
+  color: $c-white;
+  font-weight: $font-w-semibold;
+  background-color: $c-black-opacity;
+  margin-bottom: calculateRem(20px);
+}
+
+@include media-query(wide) {
+  .mt-people {
+    padding: calculateRem(40px) 0 calculateRem(40px);
+  }
+  
+  .mt-people__img {
+    height: calculateRem(430px);
+  }  
+
+  .mt-people__title {
+    @include font-rem(40px);
+  }
+
+  .mt-people__text {
+    @include font-rem(20px);
+  }  
+}

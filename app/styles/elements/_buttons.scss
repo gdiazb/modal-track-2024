@@ -1,6 +1,7 @@
 .mt-btn {
   @include font-rem(14px);
-  display: inline-block;
+  display: block;
+  max-width: max-content;
   text-align: center;
   font-family: 'Inter', sans-serif;
   font-weight:  500;
