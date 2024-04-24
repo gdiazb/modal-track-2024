@@ -1,0 +1,52 @@
+.mt-contact {
+  padding: calculateRem(40px) 0;
+  background-image: url('../assets/images/contact/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .mt-btn {
+    margin: 0 auto;
+  }
+}
+
+.mt-contact__content {
+  max-width: calculateRem(950px);
+  text-align: center;
+  font-family: $font-primary;
+  margin: 0 auto;
+}
+
+.mt-contact__img {
+  
+}
+
+.mt-contact__text {
+  @include font-rem(20px);
+  color: $c-brand;
+  padding-bottom: calculateRem(10px);
+  font-weight:  $font-w-bold;
+}
+
+.mt-contact__title {
+  @include font-rem(40px);
+  padding-bottom: calculateRem(30px);
+  font-weight:  $font-w-bold;
+}
+
+@include media-query(wide) {
+  .mt-contact {
+    padding: calculateRem(100px) 0;
+  }
+  
+  .mt-contact__img {
+
+  }  
+
+  .mt-contact__title {
+    @include font-rem(50px);
+  }
+
+  .mt-contact__text {
+
+  }  
+}

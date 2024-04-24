@@ -856,7 +856,7 @@ template {
 }
 .mt-people {
   position: relative;
-  padding: 1.25rem 0 1.25rem;
+  padding: 1.25rem 0 0;
 }
 .mt-people .mt-btn {
   margin: 0 auto;
@@ -906,7 +906,7 @@ template {
 
 @media only screen and (min-width: 1024px) {
   .mt-people {
-    padding: 2.5rem 0 2.5rem;
+    padding: 2.5rem 0 0;
   }
   .mt-people__img {
     height: 26.875rem;
@@ -918,6 +918,48 @@ template {
   .mt-people__text {
     font-size: 20px;
     font-size: 1.25rem;
+  }
+}
+.mt-contact {
+  padding: 2.5rem 0;
+  background-image: url("../assets/images/contact/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.mt-contact .mt-btn {
+  margin: 0 auto;
+}
+
+.mt-contact__content {
+  max-width: 59.375rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  margin: 0 auto;
+}
+
+.mt-contact__text {
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #C80D12;
+  padding-bottom: 0.625rem;
+  font-weight: 700;
+}
+
+.mt-contact__title {
+  font-size: 40px;
+  font-size: 2.5rem;
+  padding-bottom: 1.875rem;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1024px) {
+  .mt-contact {
+    padding: 6.25rem 0;
+  }
+  .mt-contact__title {
+    font-size: 50px;
+    font-size: 3.125rem;
   }
 }
 .layout {
