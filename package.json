@@ -6,12 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch app/styles/index.scss public/css/styles.css",
-    "pug": "pug -w --pretty app/templates/index.pug -o public"
+    "pug": "pug -w --pretty app/templates/index.pug -o public",
+    "build:pug": "pug $(find app/templates -type f -name '*.pug' ! -name '_*.pug') -o public --pretty -w"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "pug": "^3.0.2",
     "sass": "^1.75.0"
+  },
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
