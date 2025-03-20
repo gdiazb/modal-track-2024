@@ -962,6 +962,13 @@ template {
     font-size: 3.125rem;
   }
 }
+.mt-oc-title {
+  font-size: 40px;
+  font-size: 2.5rem;
+  font-family: "Inter", sans-serif;
+  color: red;
+}
+
 .layout {
   width: 90%;
   margin: 0 auto;
