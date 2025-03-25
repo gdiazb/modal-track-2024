@@ -1,5 +1,148 @@
-.mt-oc-title {
-  @include font-rem(40px);
+
+.mt-main-container {
+  padding: 0 20px;
+}
+
+.mt-content--our-company {
+
+  padding-top: 36px;
+}
+
+.mt-oc-title {  
   font-family: 'Inter', sans-serif;
-  color: red;
+  color: $black-primary;
+  @include font-rem(40px);
+  padding-bottom: 16px;
+}
+
+.mt-oc-description {
+  @include font-rem(16px);
+  font-family: $font-primary;
+  color: $black-primary;
+  padding-bottom: 30px;
+  line-height: 30px;
+}
+
+.mt-oc-hero__image {
+
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  padding: 40px 0;
+
+}
+
+// mision y vision 
+
+.mt-oc-achievements__subtitle  { 
+  @include font-rem(22px);
+  font-family: $font-primary;
+  color: $black-primary;
+  padding-bottom: 16px;
+}
+
+.mt-oc-achievements__subtitle-text {
+  @include font-rem(16px);
+  font-family: $font-primary;
+  color: $black-primary;
+  padding-bottom: 30px;
+  line-height: 30px;
+
+}
+
+// principios organizacionales
+
+.mt-oc-values__group {
+  padding-bottom: 80px;
+}
+
+.mt-oc-values__title {
+  @include font-rem(24px);
+  font-family: $font-primary;
+  color: $black-primary;  
+  padding: 40px 0 27px;
+}
+
+.mt-oc-values__item-subtitle {
+  @include font-rem(16px);
+  font-family: $font-primary;
+  color: $black-primary;  
+  padding-bottom: 25px;
+}
+
+.mt-oc-values__item-text {
+  @include font-rem(16px);
+  font-family: $font-primary;
+  color: $grey-primary;
+  padding-bottom: 20px;
+  line-height: 30px;
+
+}
+
+@include media-query(wide) {
+
+
+  .mt-content--our-company {
+
+    padding-top: 60px;
+  }
+
+  .mt-main-wraper {
+
+    padding: 0 64px;
+  }
+
+ 
+  
+
+  .mt-oc-title {
+    padding-bottom: 20px;
+  
+  }
+
+  .mt-oc-description {
+    @include font-rem(20px);
+    
+  }
+
+  .mt-oc-hero__image {
+
+    max-width: 525px;
+    height: auto;
+    
+  }
+  
+  // mision y vision 
+
+  .mt-oc-achievements__subtitle  { 
+    @include font-rem(24px);
+    padding-bottom: 24px;
+  }
+
+  .mt-oc-achievements__subtitle-text {
+    @include font-rem(18px);
+    
+  }
+
+ // principios organizacionales
+
+.mt-oc-values__group {
+  padding-bottom: 80px;
+ }
+
+.mt-oc-values__title {
+  @include font-rem(30px); 
+  padding-bottom: 30px;
+}
+
+.mt-oc-values__item-subtitle {
+  @include font-rem(16px);
+  padding-bottom: 12px;
+}
+
+.mt-oc-values__item-text {
+  @include font-rem(16px);
+  padding-bottom: 80px;
+}
+
 }
