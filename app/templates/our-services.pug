@@ -1,0 +1,37 @@
+extends _template
+
+block variables
+  -var varTitle = "Nuestros Servicios"
+  -var varDescription = "Servicios de ModalTrack."
+  -var varAuthor = "Kevin Prado"
+
+block content
+  .mt-main-content.mt-content--our-services
+      div.mt-os-hero
+        h1.mt-os-hero__title Nuestros Servicios
+        p.mt-os-hero__text Optimizamos tu cadena de suministro con soluciones de carga a medida. Desde transporte terrestre confiable hasta logística eficiente de última milla, ofrecemos una experiencia sin contratiempos. Nuestra tecnología de vanguardia y equipo especializado garantizan entregas precisas y a tiempo, impulsando tu éxito empresarial. Confía en nosotros para llevar tu carga hacia un futuro de eficiencia y crecimiento.
+        a.mt-btn.mt-hero__btn(href="#") Contáctanos
+        img(src="assets/images/our-services/our-services-1.jpg", alt="camiones y contenedores", class="mt-os-hero__image")
+      div.mt-os-card-grid
+        div.mt-os-card-grid__item
+          h2.mt-os-card-grid__title Contenedores 
+          p.mt-os-card-grid__text Transportar contenedores en Colombia implica mover mercancías vitales por carretera, ferrocarril o mar, impulsando la economía nacional y global.
+          img(src="assets/images/our-services/containers.svg", alt="Contenedores", class="mt-os-hero__logo")
+        div.mt-os-card-grid__item 
+          h2.mt-os-card-grid__title Cargas refrigeradas 
+          p.mt-os-card-grid__text Esta labor requiere equipos especializados para mantener productos perecederos a la temperatura adecuada durante todo el trayecto.
+          img(src="assets/images/our-services/refrigerated-loads.svg", alt="Cargas refrigeradas", class="mt-os-hero__logo")
+        div.mt-os-card-grid__item 
+          h2.mt-os-card-grid__title Última Milla 
+          p.mt-os-card-grid__text Realizar transporte de última milla implica entregar productos a destinatarios locales, abordando desafíos urbanos y logísticos con eficiencia.
+          img(src="assets/images/our-services/last-mile.svg", alt="Ultima Milla", class="mt-os-hero__logo")
+        div.mt-os-card-grid__item 
+          h2.mt-os-card-grid__title Cargo 
+          p.mt-os-card-grid__text Transportamos cualqueir tipo de mercancia etc ola blabala blabal balbalb la balb labalbalabla blab labal blab labal lalb lablabak ba
+          img(src="assets/images/our-services/charge.svg", alt="Cargo", class="mt-os-hero__logo")
+        div.mt-os-card-grid__item 
+          h2.mt-os-card-grid__title Sector Construcción
+          p.mt-os-card-grid__text Transportamos cualqueir tipo de mercancia etc ola blabala blabal balbalb la balb labalbalabla blab labal blab labal lalb lablabak ba
+          img(src="assets/images/our-services/construction-sector.svg", alt="Sector Construccion", class="mt-os-hero__logo")
+    include components/calltoaction/_index
+    
