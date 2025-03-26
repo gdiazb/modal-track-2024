@@ -27,7 +27,6 @@
   max-width: 450px;
   height: auto;
   padding: 40px 0;
-
 }
 
 // mision y vision 
@@ -76,8 +75,6 @@
 }
 
 @include media-query(wide) {
-
-
   .mt-content--our-company {
     padding-top: 60px;
   }
@@ -112,23 +109,22 @@
 
  // principios organizacionales
 
-.mt-oc-values__group {
-  padding-bottom: 80px;
- }
+  .mt-oc-values__group {
+    padding-bottom: 80px;
+  }
 
-.mt-oc-values__title {
-  @include font-rem(30px); 
-  padding-bottom: 30px;
-}
+  .mt-oc-values__title {
+    @include font-rem(30px); 
+    padding-bottom: 30px;
+  }
 
-.mt-oc-values__item-subtitle {
-  @include font-rem(16px);
-  padding-bottom: 12px;
-}
+  .mt-oc-values__item-subtitle {
+    @include font-rem(16px);
+    padding-bottom: 12px;
+  }
 
-.mt-oc-values__item-text {
-  @include font-rem(16px);
-  padding-bottom: 80px;
-}
-
+  .mt-oc-values__item-text {
+    @include font-rem(16px);
+    padding-bottom: 80px;
+  }
 }
