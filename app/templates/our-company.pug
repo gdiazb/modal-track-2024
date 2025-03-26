@@ -6,39 +6,48 @@ block variables
   -var varAuthor = "Geraldine Diaz"
 
 block content
-  .mt-main-content
-    h1.mt-oc-title Nuestra compañía
-    p Somos un grupo empresarial 100% Colombiano; Formado con el animo de llegar a cada eslabón de la cadena logística, conociendo sus principales problemáticas y brindando soluciones efectivas e innovadoras.
-    a.mt-btn.mt-hero__btn(href="#") Contáctanos
-    img(src="assets/images/services/services.png", alt="Camión rojo")
-    article
-      section
-        h2 Misión
-        p Somos una compañía especializada en el transporte integral de contenedores, carga suelta, consolidada y en logística de operaciones para el cargue, transporte y descargue de todo tipo de mercancías.
-        p Brindando a nuestros clientes una red de distribución oportuna y segura; utilizando los más altos estándares de calidad, con una amplia red que integra a nuestros proveedores y aliados estratégicos, con el desarrollo continuo de tecnologías de alta calidad.
-        p Todo esto con el fin de satisfacer las necesidades puntuales de cada cliente.
-      section
-        h2 Visión
-        p En el horizonte de la logística en Colombia, vislumbramos un futuro brillante y eficiente. Somos una empresa de carga que trasciende fronteras, impulsando el comercio y conectando regiones. Nuestra visión es ser el motor de la economía, donde cada envío es una promesa cumplida.
-        p Con tecnología de vanguardia y un equipo apasionado, creamos soluciones logísticas que marcan la diferencia. Aspiramos a ser pioneros en sostenibilidad, dejando una huella verde en nuestro camino. Juntos, estamos esculpiendo un mañana donde la carga fluye sin límites, fortaleciendo el corazón logístico de Colombia y proyectándonos hacia el mundo.
+  .mt-main-content.mt-content--our-company
+    .mt-main-wraper
+      div.mt-main-container
+        h1.mt-oc-title Nuestra compañía
+        p.mt-oc-description Somos un grupo empresarial 100% Colombiano; Formado con el animo de llegar a cada eslabón de la cadena logística, conociendo sus principales problemáticas y brindando soluciones efectivas e innovadoras.
+        a.mt-btn.mt-hero__btn(href="#") Contáctanos
+      img(src="assets/images/our-company/hero.jpg", alt="Camión rojo", class="mt-oc-hero__image")
+      div.mt-main-container 
+        article.mt-oc-achievements
+          section
+            h2.mt-oc-achievements__subtitle Misión
+            p.mt-oc-achievements__subtitle-text Somos una compañía especializada en el transporte integral de contenedores, carga suelta, consolidada y en logística de operaciones para el cargue, transporte y descargue de todo tipo de mercancías.
+            p.mt-oc-achievements__subtitle-text Brindando a nuestros clientes una red de distribución oportuna y segura; utilizando los más altos estándares de calidad, con una amplia red que integra a nuestros proveedores y aliados estratégicos, con el desarrollo continuo de tecnologías de alta calidad.
+            p.mt-oc-achievements__subtitle-text Todo esto con el fin de satisfacer las necesidades puntuales de cada cliente.
+          section
+            h2.mt-oc-achievements__subtitle Visión
+            p.mt-oc-achievements__subtitle-text En el horizonte de la logística en Colombia, vislumbramos un futuro brillante y eficiente. Somos una empresa de carga que trasciende fronteras, impulsando el comercio y conectando regiones. Nuestra visión es ser el motor de la economía, donde cada envío es una promesa cumplida.
+            p.mt-oc-achievements__subtitle-text Con tecnología de vanguardia y un equipo apasionado, creamos soluciones logísticas que marcan la diferencia. Aspiramos a ser pioneros en sostenibilidad, dejando una huella verde en nuestro camino. Juntos, estamos esculpiendo un mañana donde la carga fluye sin límites, fortaleciendo el corazón logístico de Colombia y proyectándonos hacia el mundo.
     include components/calltoaction/_index
-    section
-      h2 Principios organizacionales
-      article
-        h3 Eficiencia Operativa
-        p Buscar constantemente la optimización de procesos y recursos para ofrecer servicios de carga ágiles y rentables.
-      article
-        h3 Sostenibilidad Ambiental
-        p Integrar prácticas y tecnologías que minimicen el impacto ambiental, promoviendo la responsabilidad ecológica en cada operación.
-      article
-        h3 Compromiso con la Seguridad
-        p Priorizar la seguridad de los trabajadores, la carga y el público en general, siguiendo rigurosos estándares y procedimientos.
-      article
-        h3 Cultura de Servicio al Cliente
-        p Mantener un compromiso inquebrantable con la satisfacción del cliente, ofreciendo atención personalizada y soluciones adaptadas a sus necesidades.
-      article
-        h3 Innovación Tecnológica
-        p Adoptar y desarrollar tecnologías de vanguardia para mejorar la gestión logística, el rastreo de carga y la comunicación con clientes.
-      article
-        h3 Desarrollo y Crecimiento del Personal
-        p Fomentar un ambiente de aprendizaje continuo y desarrollo profesional, reconociendo y promoviendo el talento interno.
+    .mt-main-wraper
+      div.mt-main-container
+        section.mt-oc-values
+          h2.mt-oc-values__title Principios organizacionales
+          div.mt-oc-values__group
+            article.mt-oc-values__item
+              h3.mt-oc-values__item-subtitle Eficiencia Operativa
+              p.mt-oc-values__item-text Buscar constantemente la optimización de procesos y recursos para ofrecer servicios de carga ágiles y rentables.
+            article.mt-oc-values__item
+              h3.mt-oc-values__item-subtitle  Compromiso con la Seguridad
+              p.mt-oc-values__item-text Priorizar la seguridad de los trabajadores, la carga y el público en general, siguiendo rigurosos estándares y procedimientos.
+            article.mt-oc-values__item
+              h3.mt-oc-values__item-subtitle  Innovación Tecnológica
+              p.mt-oc-values__item-text Adoptar y desarrollar tecnologías de vanguardia para mejorar la gestión logística, el rastreo de carga y la comunicación con clientes.
+          div.mt-oc-values__group
+            article.mt-oc-values__item
+              h3.mt-oc-values__item-subtitle Sostenibilidad Ambiental
+              p.mt-oc-values__item-text Integrar prácticas y tecnologías que minimicen el impacto ambiental, promoviendo la responsabilidad ecológica en cada operación.
+            article.mt-oc-values__item
+              h3.mt-oc-values__item-subtitle  Cultura de Servicio al Cliente
+              p.mt-oc-values__item-text Mantener un compromiso inquebrantable con la satisfacción del cliente, ofreciendo atención personalizada y soluciones adaptadas a sus necesidades.
+            article.mt-oc-values__item
+              h3.mt-oc-values__item-subtitle  Desarrollo y Crecimiento del Personal
+              p.mt-oc-values__item-text Fomentar un ambiente de aprendizaje continuo y desarrollo profesional, reconociendo y promoviendo el talento interno.
+
+             
