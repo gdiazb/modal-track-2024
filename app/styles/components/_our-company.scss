@@ -4,7 +4,6 @@
 }
 
 .mt-content--our-company {
-
   padding-top: 36px;
 }
 
@@ -24,7 +23,6 @@
 }
 
 .mt-oc-hero__image {
-
   width: 100%;
   max-width: 450px;
   height: auto;
@@ -34,7 +32,7 @@
 
 // mision y vision 
 
-.mt-oc-achievements__subtitle  { 
+.mt-oc-achievements__subtitle { 
   @include font-rem(22px);
   font-family: $font-primary;
   color: $black-primary;
@@ -47,7 +45,6 @@
   color: $black-primary;
   padding-bottom: 30px;
   line-height: 30px;
-
 }
 
 // principios organizacionales
@@ -76,52 +73,41 @@
   color: $grey-primary;
   padding-bottom: 20px;
   line-height: 30px;
-
 }
 
 @include media-query(wide) {
 
 
   .mt-content--our-company {
-
     padding-top: 60px;
   }
 
   .mt-main-wraper {
-
     padding: 0 64px;
   }
 
- 
-  
-
   .mt-oc-title {
     padding-bottom: 20px;
-  
   }
 
   .mt-oc-description {
     @include font-rem(20px);
-    
   }
 
   .mt-oc-hero__image {
-
     max-width: 525px;
     height: auto;
-    
   }
   
   // mision y vision 
 
-  .mt-oc-achievements__subtitle  { 
+  .mt-oc-achievements__subtitle { 
     @include font-rem(24px);
     padding-bottom: 24px;
   }
 
   .mt-oc-achievements__subtitle-text {
     @include font-rem(18px);
-    
   }
 
  // principios organizacionales
