@@ -1,102 +1,97 @@
 .mt-content--our-services {
-    padding-top: 36px;
+  padding-top: 36px;
 }
 
 .mt-os-hero {
-    padding: 0px 36px 35px 19px;
+  padding: 0px 36px 35px 19px;
 
-    .mt-os-hero__title {
-        @include font-rem(40px);
-        font-family: $font-primary;
-        color: $black-primary;  
-        padding: 0px 0px 16px 0px ;
-    }
+}
 
-    .mt-os-hero__text {
-        @include font-rem(16px);
-        font-family: $font-primary;
-        color: $black-primary;  
-        padding: 0px 0px 30px 0px;
-        line-height: 26px;
-    }
-    
+.mt-os-hero__title {
+  @include font-rem(40px);
+  font-family: $font-primary;
+  color: $black-primary;
+  padding: 0px 0px 16px 0px;
+}
+
+.mt-os-hero__text {
+  @include font-rem(16px);
+  font-family: $font-primary;
+  color: $black-primary;
+  padding: 0px 0px 30px 0px;
+  line-height: 26px;
 }
 
 .mt-os-hero__image {
-    width: 100%;
-    max-width: 427px;
-    height: auto;
-    padding-top: 35px;
+  width: 100%;
+  max-width: 427px;
+  height: auto;
+  padding-top: 35px;
 }
 
 .mt-os-card-grid {
-    padding: 50px 27px 50px 26px;
-
-    .mt-os-card-grid__item{
-        padding: 30px 30px 0;
-        border: 1px solid #D2D2D2;
-        border-radius: 13px;
-        background-color: #F9F9FA;
-
-        .mt-os-card-grid__title {
-            @include font-rem(20px);
-            font-family: $font-main;
-            color: $black-primary; 
-            padding: 0px 0px 20px 0px;
-        }
-
-        .mt-os-card-grid__text {
-            @include font-rem(16px);
-            font-family: $font-primary;
-            color: $grey-primary; 
-            padding: 0 0px 39px 0px;
-        }
-
-        .mt-os-hero__logo {        
-            display: block;
-            margin: 0 0 0 auto;
-        }
-
-    }
+  padding: 50px 27px 50px 26px;
 
 }
 
+.mt-os-card-grid__item {
+  padding: 30px 30px 0;
+  border: 1px solid #D2D2D2;
+  border-radius: 13px;
+  background-color: #F9F9FA;
+}
+
+.mt-os-card-grid__title {
+  @include font-rem(20px);
+  font-family: $font-main;
+  color: $black-primary;
+  padding: 0px 0px 20px 0px;
+}
+
+.mt-os-card-grid__text {
+  @include font-rem(16px);
+  font-family: $font-primary;
+  color: $grey-primary;
+  padding: 0 0px 39px 0px;
+}
+
+.mt-os-hero__logo {
+  display: block;
+  margin: 0 0 0 auto;
+}
 
 @include media-query(wide) {
+  .mt-content--our-services {
+    padding-top: 53px;
+  }
 
-    .mt-content--our-services {
-        padding-top: 53px;
-    }
-    
-    .mt-os-hero__title {
-        @include font-rem(50px); 
-        padding-bottom: 20px;
-    }
+  .mt-os-hero__title {
+    @include font-rem(50px);
+    padding-bottom: 20px;
+  }
 
-    .mt-os-hero__text {
-        @include font-rem(20px);  
-        padding-bottom: 30px;
-        line-height: 30px;
-    }
+  .mt-os-hero__text {
+    @include font-rem(20px);
+    padding-bottom: 30px;
+    line-height: 30px;
+  }
 
-    .mt-os-hero__image {
-        width: 100%;
-        max-width: 613px;
-        height: auto;
-        padding-bottom: 90px;
-    }
+  .mt-os-hero__image {
+    width: 100%;
+    max-width: 613px;
+    height: auto;
+    padding-bottom: 90px;
+  }
 
-    .mt-os-card-grid {
-        padding-bottom: 90px;      
+  .mt-os-card-grid {
+    padding-bottom: 90px;
+  }
 
-        .mt-os-card-grid__title {
-            padding-bottom: 20px;
-        }
+  .mt-os-card-grid__title {
+    padding-bottom: 20px;
+  }
 
-        .mt-os-card-grid__text {
-            padding-bottom: 39px;
-        }
-
-    }
-            
+  .mt-os-card-grid__text {
+    padding-bottom: 39px;
+  }
 }
