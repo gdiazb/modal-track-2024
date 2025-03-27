@@ -1,0 +1,130 @@
+.mt-content--jobs-page {
+  padding-top: 36px;
+}
+
+.mt-jobs-page {
+  padding: 0px 36px 0 19px;
+}
+
+.mt-jobs-page__title {
+  @include font-rem(40px);
+  font-family: $font-primary;
+  color: $black-primary;
+  padding: 0px 0px 16px 0px;
+}
+
+.mt-jobs-page__text {
+  @include font-rem(16px);
+  font-family: $font-primary;
+  color: $black-primary;
+  padding: 0px 0px 30px 0px;
+  line-height: 26px;
+}
+
+.mt-jobs-page__image {
+  width: 100%;
+  max-width: 427px;
+  height: auto;
+  padding: 40px 20px 98px 20px;
+}
+
+.mt-jobs-forms {
+  background-color: #F9F9FA;
+  text-align: center;
+  align-items: center;
+  padding: 50px 21px 0 19px;
+}
+
+.mt-jobs-forms-1 {
+  background-color: #F9F9FA;
+  text-align: center;
+  align-items: center;
+  padding: 0 21px 0 19px;
+}
+
+.mt-jobs-forms__title {
+  @include font-rem(30px);
+  font-family: $font-primary;
+  color: $black-primary;
+  padding-bottom: 30px;
+}
+
+.mt-jobs-forms__text {
+  @include font-rem(18px);
+  font-family: $font-primary;
+  color: $black-primary;
+  padding-bottom: 30px;
+  line-height: 30px;
+}
+
+.mt-jobs-forms__label {
+  @include font-rem(16px);
+  font-family: $font-primary;
+  color: $black-primary;
+  line-height: 24px;
+  display: block;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.mt-jobs-forms__input {
+  width: 100%;
+  padding: 11px 16px 11px 20px;
+  margin-bottom: 30px;
+  border: 1px solid #DFE4EA;
+  border-radius: 6px;
+  background: #FFFFFF;
+}
+
+.mt-jobs-forms__input::placeholder {
+  color: #9CA3AF; 
+  @include font-rem(16px);
+  line-height: 24px;
+}
+
+.mt-jobs-forms__select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #DFE4EA;
+  border-radius: 6px;
+  background: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mt-jobs__btn {
+  
+  margin-top: 45px;
+  padding: 13px 96px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@include media-query(wide) {
+
+  .mt-content--jobs-page {
+    padding-top: 60px;
+  }
+
+  .mt-jobs-page {
+    padding: 0px 36px 0 19px;
+  }
+  
+  .mt-jobs-page__title {
+    @include font-rem(50px);
+    padding: 0px 0px 20px 0px;
+  }
+  
+  .mt-jobs-page__text {
+    @include font-rem(20px);
+    line-height: 30px;
+}
+
+.mt-jobs-forms {
+  padding: 160px 378px 0 377px;
+}
+
+  .mt-jobs-forms-1 {
+    padding: 46px 454px 0 456px;
+}
+}
