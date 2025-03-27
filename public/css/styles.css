@@ -1119,31 +1119,27 @@ template {
 .mt-os-card-grid {
   padding: 50px 27px 50px 26px;
 }
-
-.mt-os-card-grid__item {
+.mt-os-card-grid .mt-os-card-grid__item {
   padding: 30px 30px 0;
   border: 1px solid #D2D2D2;
   border-radius: 13px;
   background-color: #F9F9FA;
 }
-
-.mt-os-card-grid__title {
+.mt-os-card-grid .mt-os-card-grid__item .mt-os-card-grid__title {
   font-size: 20px;
   font-size: 1.25rem;
   font-family: "Source Sans 3", sans-serif;
   color: #111827;
   padding: 0px 0px 20px 0px;
 }
-
-.mt-os-card-grid__text {
+.mt-os-card-grid .mt-os-card-grid__item .mt-os-card-grid__text {
   font-size: 16px;
   font-size: 1rem;
   font-family: "Inter", sans-serif;
   color: #4B5563;
   padding: 0 0px 39px 0px;
 }
-
-.mt-os-hero__logo {
+.mt-os-card-grid .mt-os-card-grid__item .mt-os-hero__logo {
   display: block;
   margin: 0 0 0 auto;
 }
@@ -1172,10 +1168,10 @@ template {
   .mt-os-card-grid {
     padding-bottom: 90px;
   }
-  .mt-os-card-grid__title {
+  .mt-os-card-grid .mt-os-card-grid__title {
     padding-bottom: 20px;
   }
-  .mt-os-card-grid__text {
+  .mt-os-card-grid .mt-os-card-grid__text {
     padding-bottom: 39px;
   }
 }
