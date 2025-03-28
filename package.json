@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch app/styles/index.scss public/css/styles.css",
-    "pug": "pug -w --pretty app/templates/index.pug -o public",
-    "build:pug": "pug $(find app/templates -type f -name '*.pug' ! -name '_*.pug') -o public --pretty -w"
+    "pug": "pug $(find app/templates -type f -name '*.pug' ! -name '_*.pug') -o public --pretty -w"
   },
   "author": "",
   "license": "ISC",
