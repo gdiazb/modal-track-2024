@@ -1224,16 +1224,13 @@ template {
   display: none;
 }
 
-div.mt-jobs-cont {
-  padding-top: 98px;
-  padding-bottom: 60px;
-}
-
 .mt-jobs-forms {
   background-image: url("../assets/images/contact/background-movile.svg");
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 98px;
+  padding-bottom: 60px;
 }
 
 .mt-jobs-forms__header {
@@ -1355,6 +1352,8 @@ div.mt-jobs-cont {
     background-repeat: repeat;
     background-size: contain;
     background-position: center;
+    padding-bottom: 130px;
+    padding-top: 90px;
   }
   .mt-jobs-forms__header {
     padding: 70px 0 0 0;
@@ -1365,14 +1364,10 @@ div.mt-jobs-cont {
   .mt-jobs__btn {
     padding-bottom: 70px;
   }
-  div.mt-jobs-cont {
-    padding-bottom: 130px;
-    padding-top: 90px;
-  }
   .mt-jobs-page__cont {
     padding-bottom: 0;
   }
-  div.mt-jobs-page__picture-mobile {
+  .mt-jobs-page__picture-mobile {
     display: none;
   }
   .img-movil {
