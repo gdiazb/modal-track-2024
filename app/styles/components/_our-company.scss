@@ -1,3 +1,6 @@
+.mt-main-wraper {
+  
+}
 
 .mt-main-container {
   padding: 0 20px;
@@ -8,7 +11,7 @@
 }
 
 .mt-oc-title {  
-  font-family: 'Inter', sans-serif;
+  font-family: $font-secondary;
   color: $black-primary;
   @include font-rem(40px);
   padding-bottom: 16px;
@@ -48,83 +51,201 @@
 
 // principios organizacionales
 
-.mt-oc-values__group {
-  padding-bottom: 80px;
+.mt-oc-values {
+  display: grid;
 }
 
+// Contenedor del acordeón
+.mt-oc-values__group {
+  width: 100%;
+  max-width: 351px;
+  margin: 0 auto; 
+}
+
+// Título principal
 .mt-oc-values__title {
   @include font-rem(24px);
   font-family: $font-primary;
-  color: $black-primary;  
-  padding: 40px 0 27px;
+  color: $black-primary;
+  padding: 40px 45px 30px 0;
+  text-align: left;
+  margin: 0 auto;
 }
 
+// Cada artículo del acordeón
+.mt-oc-values__item {
+  overflow: hidden;
+  border-top: 1px solid $white-border;
+}
+
+// Botón de cada sección (título clickeable)
 .mt-oc-values__item-subtitle {
   @include font-rem(16px);
   font-family: $font-primary;
-  color: $black-primary;  
-  padding-bottom: 25px;
+  color: $black-primary;
+  width: 100%;
+  text-align: left;
+  background-color: $white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+
+  &:hover {
+    background-color: $white-hover;
+  }
 }
 
-.mt-oc-values__item-text {
-  @include font-rem(16px);
-  font-family: $font-primary;
-  color: $grey-primary;
-  padding-bottom: 20px;
-  line-height: 30px;
-}
-
-@include media-query(wide) {
-  .mt-content--our-company {
-    padding-top: 60px;
+  // Icono de flecha para indicar apertura
+  .mt-oc-values__item-subtitle::after {
+    content: "v";
+    font-size: 14px;
+    color: $white-border;
+    transition: transform 0.3s ease;
   }
 
-  .mt-main-wraper {
-    padding: 0 64px;
+  // Rotar flecha cuando está activo
+  .mt-oc-values__item.active .mt-oc-values__item-subtitle::after {
+    transform: rotate(180deg);
   }
 
-  .mt-oc-title {
-    padding-bottom: 20px;
+  // Contenido del acordeón (oculto por defecto)
+  .mt-oc-values__item-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background: $white;
+    padding-top: 25px;
+
   }
 
-  .mt-oc-description {
-    @include font-rem(20px);
-  }
-
-  .mt-oc-hero__image {
-    max-width: 525px;
-    height: auto;
-  }
-  
-  // mision y vision 
-
-  .mt-oc-achievements__subtitle { 
-    @include font-rem(24px);
-    padding-bottom: 24px;
-  }
-
-  .mt-oc-achievements__subtitle-text {
-    @include font-rem(18px);
-  }
-
- // principios organizacionales
-
-  .mt-oc-values__group {
-    padding-bottom: 80px;
-  }
-
-  .mt-oc-values__title {
-    @include font-rem(30px); 
-    padding-bottom: 30px;
-  }
-
-  .mt-oc-values__item-subtitle {
-    @include font-rem(16px);
-    padding-bottom: 12px;
-  }
-
+  // Texto del acordeón
   .mt-oc-values__item-text {
     @include font-rem(16px);
-    padding-bottom: 80px;
+    font-family: $font-primary;
+    color: $grey-primary;
+    padding-bottom: 20px; 
   }
-}
+
+  // Sección activa (contenido desplegado)
+  .mt-oc-values__item.active .mt-oc-values__item-content {
+    max-height: 150px;
+  }
+
+  @include media-query(wide) {
+    .mt-main-wraper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // Crea tres columnas
+      column-gap: 51px; // Espaciado entre columnas
+      width: 100%;
+      max-width: 1200px; // Limita el ancho máximo
+      margin: 0 auto; 
+      padding: 0 64px;
+    }
+    div.mt-main-containers {
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+    }
+
+    .mt-oc-hero__image {
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+
+    }
+
+    .mt-main-container {
+      grid-column: 2 / 2;
+      grid-row: 1 / 3;
+
+    }
+ 
+    .mt-content--our-company {
+      padding-top: 60px;
+    }
+  
+    .mt-oc-title {
+      padding-bottom: 20px;
+    }
+  
+    .mt-oc-description {
+      @include font-rem(20px);
+    }
+  
+    .mt-oc-hero__image {
+      max-width: 525px;
+      height: auto;
+    }
+  
+    // Misión y visión
+    .mt-oc-achievements__subtitle { 
+      @include font-rem(24px);
+      padding-bottom: 24px;
+    }
+  
+    .mt-oc-achievements__subtitle-text {
+      @include font-rem(18px);
+    }
+  
+    // Principios organizacionales en PC
+    .mt-oc-values {
+      background-image: url('..assets/images/our-company/rayas.svg');
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Centra todo el contenido
+      padding: 90px 65px 80px 64px
+    }
+  
+    .mt-oc-values__group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); // Crea tres columnas
+      column-gap: 140px; // Espaciado entre columnas
+      width: 100%;
+      max-width: 1200px; // Limita el ancho máximo
+      margin: 0 auto; // Centra el contenedor
+     
+    }
+  
+    .mt-oc-values__title {
+      @include font-rem(30px); 
+      padding-bottom: 30px;
+      margin: 0 auto 0 0;
+    }
+  
+    .mt-oc-values__item {
+      background: transparent; // Quita fondo del acordeón
+      border: none; // Elimina bordes
+      box-shadow: none; // Quita sombras
+      padding-bottom: 80px;
+      padding-top: 0;
+    }
+  
+    .mt-oc-values__item-subtitle {
+      @include font-rem(16px);
+      padding-bottom: 12px;
+      font-weight: bold; // Hace los títulos más llamativos
+      background: transparent;
+      cursor: default; // Desactiva clics
+      padding: 0 0 12px;
+    }
+  
+    .mt-oc-values__item-text {
+      @include font-rem(16px);
+      padding-bottom: 20px;
+    }
+  
+    // Aseguramos que el contenido del acordeón esté siempre visible en PC
+    .mt-oc-values__item-content {
+      border-top:0;
+      padding-top: 0px;
+    }
+  
+    // Elimina la flecha en versión de escritorio
+    .mt-oc-values__item-subtitle::after {
+      content: none;
+    }
+  }
+  

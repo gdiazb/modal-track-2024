@@ -3,12 +3,12 @@ extends _template
 block variables
   -var varTitle = "Sobre nosotros"
   -var varDescription = "Descripción de ModalTrack."
-  -var varAuthor = "Geraldine Diaz"
+  -var varAuthor = "Kevin Prado"
 
 block content
   .mt-main-content.mt-content--our-company
     .mt-main-wraper
-      div.mt-main-container
+      div.mt-main-containers
         h1.mt-oc-title Nuestra compañía
         p.mt-oc-description Somos un grupo empresarial 100% Colombiano; Formado con el animo de llegar a cada eslabón de la cadena logística, conociendo sus principales problemáticas y brindando soluciones efectivas e innovadoras.
         a.mt-btn.mt-hero__btn(href="#") Contáctanos
@@ -25,27 +25,31 @@ block content
             p.mt-oc-achievements__subtitle-text En el horizonte de la logística en Colombia, vislumbramos un futuro brillante y eficiente. Somos una empresa de carga que trasciende fronteras, impulsando el comercio y conectando regiones. Nuestra visión es ser el motor de la economía, donde cada envío es una promesa cumplida.
             p.mt-oc-achievements__subtitle-text Con tecnología de vanguardia y un equipo apasionado, creamos soluciones logísticas que marcan la diferencia. Aspiramos a ser pioneros en sostenibilidad, dejando una huella verde en nuestro camino. Juntos, estamos esculpiendo un mañana donde la carga fluye sin límites, fortaleciendo el corazón logístico de Colombia y proyectándonos hacia el mundo.
     include components/calltoaction/_index
-    .mt-main-wraper
-      div.mt-main-container
-        section.mt-oc-values
-          h2.mt-oc-values__title Principios organizacionales
-          div.mt-oc-values__group
-            article.mt-oc-values__item
-              h3.mt-oc-values__item-subtitle Eficiencia Operativa
-              p.mt-oc-values__item-text Buscar constantemente la optimización de procesos y recursos para ofrecer servicios de carga ágiles y rentables.
-            article.mt-oc-values__item
-              h3.mt-oc-values__item-subtitle  Compromiso con la Seguridad
-              p.mt-oc-values__item-text Priorizar la seguridad de los trabajadores, la carga y el público en general, siguiendo rigurosos estándares y procedimientos.
-            article.mt-oc-values__item
-              h3.mt-oc-values__item-subtitle  Innovación Tecnológica
-              p.mt-oc-values__item-text Adoptar y desarrollar tecnologías de vanguardia para mejorar la gestión logística, el rastreo de carga y la comunicación con clientes.
-          div.mt-oc-values__group
-            article.mt-oc-values__item
-              h3.mt-oc-values__item-subtitle Sostenibilidad Ambiental
-              p.mt-oc-values__item-text Integrar prácticas y tecnologías que minimicen el impacto ambiental, promoviendo la responsabilidad ecológica en cada operación.
-            article.mt-oc-values__item
-              h3.mt-oc-values__item-subtitle  Cultura de Servicio al Cliente
-              p.mt-oc-values__item-text Mantener un compromiso inquebrantable con la satisfacción del cliente, ofreciendo atención personalizada y soluciones adaptadas a sus necesidades.
-            article.mt-oc-values__item
-              h3.mt-oc-values__item-subtitle  Desarrollo y Crecimiento del Personal
-              p.mt-oc-values__item-text Fomentar un ambiente de aprendizaje continuo y desarrollo profesional, reconociendo y promoviendo el talento interno.
+    section.mt-oc-values
+      h2.mt-oc-values__title Principios organizacionales
+      div.mt-oc-values__group
+        article.mt-oc-values__item
+          button.mt-oc-values__item-subtitle Eficiencia Operativa
+          div.mt-oc-values__item-content
+            p.mt-oc-values__item-text Buscar constantemente la optimización de procesos y recursos para ofrecer servicios de carga ágiles y rentables.
+        article.mt-oc-values__item
+          button.mt-oc-values__item-subtitle Compromiso con la Seguridad
+          div.mt-oc-values__item-content
+            p.mt-oc-values__item-text Priorizar la seguridad de los trabajadores, la carga y el público en general, siguiendo rigurosos estándares y procedimientos.
+        article.mt-oc-values__item
+          button.mt-oc-values__item-subtitle Innovación Tecnológica
+          div.mt-oc-values__item-content
+            p.mt-oc-values__item-text Adoptar y desarrollar tecnologías de vanguardia para mejorar la gestión logística, el rastreo de carga y la comunicación con clientes.
+        article.mt-oc-values__item
+          button.mt-oc-values__item-subtitle Sostenibilidad Ambiental
+          div.mt-oc-values__item-content
+            p.mt-oc-values__item-text Integrar prácticas y tecnologías que minimicen el impacto ambiental, promoviendo la responsabilidad ecológica en cada operación.
+        article.mt-oc-values__item
+          button.mt-oc-values__item-subtitle Cultura de Servicio al Cliente
+          div.mt-oc-values__item-content
+            p.mt-oc-values__item-text Mantener un compromiso inquebrantable con la satisfacción del cliente, ofreciendo atención personalizada y soluciones adaptadas a sus necesidades.
+        article.mt-oc-values__item
+          button.mt-oc-values__item-subtitle Desarrollo y Crecimiento del Personal
+          div.mt-oc-values__item-content
+            p.mt-oc-values__item-text Fomentar un ambiente de aprendizaje continuo y desarrollo profesional, reconociendo y promoviendo el talento interno.
+  script(src="/scripts/script_our-company.js")

@@ -1,0 +1,30 @@
+extends _template
+
+block variables
+  -var varTitle = "Contactanos"
+  -var varDescription = "Conecta con ModalTrack."
+  -var varAuthor = "Kevin Prado"
+
+block content
+  .mt-main-content.mt-content--contact-page
+    div.mt-cp-contact
+      h1.mt-cp-contact__title ¿Cómo podemos ayudarte?
+      h2.mt-cp-contact__subtitle Contáctanos
+      p.mt-cp-contact__text-mobile Optimizamos tu cadena de suministro con soluciones de carga a medida. Desde transporte terrestre confiable hasta logística eficiente de última milla, ofrecemos una experiencia sin contratiempos. Nuestra tecnología de vanguardia y equipo especializado garantizan entregas precisas y a tiempo, impulsando tu éxito empresarial. Confía en nosotros para llevar tu carga hacia un futuro de eficiencia y crecimiento.
+      p.mt-cp-contact__text-desktop ¿Listo para transformar tu cadena logística? Estamos a un mensaje de distancia. Conecta con nosotros y descubre cómo podemos potenciar tu negocio juntos. ¡Es hora de llevar tu carga al siguiente nivel!
+    include components/calltoaction/_index  
+    div.mt-cp-means-contact
+      div.mt-cp-means-contact__Whatsapp
+        h3.mt-cp-means-contact__title Escríbenos por WhatsApp
+        p.mt-cp-means-contact__text Whastapp es nuestro canal de comunicación oficial, por eso te dejamos acontinuación un botón con el acceso directo a nuestro equipo de ayuda.
+        a.mt-btn.mt-contact__btn-selection(href="#") Enviar mensaje
+      div.mt-cp-means-contact__Call
+        h3.mt-cp-means-contact__title Llamanos
+        p.mt-cp-means-contact__text No hay nada más efectivo que una llamada.Con gusto atenderemos tus dudas por teléfono. A continuación encontrarás un número de teléfono exclusivo para ti.
+        a.mt-btn.mt-contact__btn-selection(href="#") 321-260 0332
+      div.mt-cp-means-contact__Email
+        h3.mt-cp-means-contact__title Enviar correo electronico
+        p.mt-cp-means-contact__text Potencia tu logística con nosotros. ¡Contáctanos para una solución personalizada hoy!
+        a.mt-btn.mt-contact__btn-selection(href="#") Enviar correo
+    
+    
