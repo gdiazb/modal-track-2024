@@ -106,7 +106,7 @@
 }
 
 // rotar flecha cuando está activo
-.mt-oc-values__item.active.mt-oc-values__item-subtitle::after {
+.mt-oc-values__item.active .mt-oc-values__item-subtitle::after {
   transform: rotate(180deg);
 }
 
@@ -128,7 +128,7 @@
 }
 
 // sección activa (contenido desplegado)
-.mt-oc-values__item.active.mt-oc-values__item-content {
+.mt-oc-values__item.active .mt-oc-values__item-content {
   max-height: 150px;
 }
 

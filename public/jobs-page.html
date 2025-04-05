@@ -69,15 +69,15 @@
             <p class="mt-jobs-forms__text">Nos contactaremos contigo para conocerte y comenzar a transformar el transporte de carga juntos.</p>
           </div>
           <div class="mt-jobs-forms__content"> 
-            <form>
+            <form action="/enviar-formulario" method="POST">
               <label class="mt-jobs-forms__label">Nombre y apellido</label>
-              <input class="mt-jobs-forms__input" type="text" placeholder="Juan Pérez">
+              <input class="mt-jobs-forms__input" type="text" name="nombre" placeholder="Juan Pérez">
               <label class="mt-jobs-forms__label">Número de celular</label>
-              <input class="mt-jobs-forms__input" type="cel" placeholder="3011230000">
+              <input class="mt-jobs-forms__input" type="text" name="celular" placeholder="3011230000">
               <label class="mt-jobs-forms__label">Correo electrónico</label>
-              <input class="mt-jobs-forms__input" type="email" placeholder="juanperez123@gmail.com">
+              <input class="mt-jobs-forms__input" type="email" name="correo" placeholder="juanperez123@gmail.com">
               <label class="mt-jobs-forms__label">Cargo</label>
-              <select class="mt-jobs-forms__select">
+              <select class="mt-jobs-forms__select" name="cargo">
                 <option class="mt-jobs-forms__select-option" value="">Seleccione</option>
                 <option class="mt-jobs-forms__select-option" value="cargo1">Cargo 1</option>
                 <option class="mt-jobs-forms__select-option" value="cargo2">Cargo 2</option>

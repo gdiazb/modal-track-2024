@@ -1070,7 +1070,7 @@ template {
   transition: transform 0.3s ease;
 }
 
-.mt-oc-values__item.active.mt-oc-values__item-subtitle::after {
+.mt-oc-values__item.active .mt-oc-values__item-subtitle::after {
   transform: rotate(180deg);
 }
 
@@ -1090,7 +1090,7 @@ template {
   padding-bottom: 20px;
 }
 
-.mt-oc-values__item.active.mt-oc-values__item-content {
+.mt-oc-values__item.active .mt-oc-values__item-content {
   max-height: 150px;
 }
 
@@ -1194,8 +1194,8 @@ template {
   padding-top: 36px;
 }
 
-.mt-os-hero {
-  padding: 0px 36px 35px 19px;
+.mt-os-hero-os {
+  padding: 0px 19px 0 20px;
 }
 
 .mt-os-hero__title {
@@ -1217,20 +1217,40 @@ template {
 
 .mt-os-hero__image {
   width: 100%;
-  max-width: 427px;
   height: auto;
   padding-top: 35px;
+  overflow: visible;
+}
+
+.mt-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .mt-os-card-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding: 50px 27px 50px 26px;
+  scroll-behavior: smooth;
 }
 
 .mt-os-card-grid__item {
-  padding: 30px 30px 0;
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+  padding: 30px 30px 0 30px;
   border: 1px solid #D2D2D2;
   border-radius: 13px;
   background-color: #F9F9FA;
+  min-width: 321px;
+  max-width: 337px;
 }
 
 .mt-os-card-grid__title {
@@ -1258,6 +1278,15 @@ template {
   .mt-content--our-services {
     padding-top: 53px;
   }
+  .mt-os-hero {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 64px;
+  }
+  div.mt-os-hero-os {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
   .mt-os-hero__title {
     font-size: 50px;
     font-size: 3.125rem;
@@ -1274,9 +1303,14 @@ template {
     max-width: 613px;
     height: auto;
     padding-bottom: 90px;
+    grid-column: 2/2;
+    grid-row: 1/1;
   }
   .mt-os-card-grid {
     padding-bottom: 90px;
+  }
+  .mt-os-card-grid__item {
+    flex: 0 0 30%;
   }
   .mt-os-card-grid__title {
     padding-bottom: 20px;
