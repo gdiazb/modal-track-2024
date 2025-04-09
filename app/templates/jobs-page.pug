@@ -20,20 +20,23 @@ block content
       div.mt-jobs-forms__header
         h1.mt-jobs-forms__title Déjanos tus datos
         p.mt-jobs-forms__text Nos contactaremos contigo para conocerte y comenzar a transformar el transporte de carga juntos.
-      div.mt-jobs-forms__content  
-       form(action="/enviar-formulario" method="POST")
+      div.mt-jobs-forms__content 
+       form(id="trabajaForm")
         label.mt-jobs-forms__label Nombre y apellido
-        input.mt-jobs-forms__input(type="text" name="nombre" placeholder="Juan Pérez")
+        input.mt-jobs-forms__input(type="text" id="nombre" name="nombre" placeholder="Juan Pérez")
         label.mt-jobs-forms__label Número de celular
-        input.mt-jobs-forms__input(type="text" name="celular" placeholder="3011230000")
+        input.mt-jobs-forms__input(type="text" id="celular" name="celular" placeholder="3011230000")
         label.mt-jobs-forms__label Correo electrónico
-        input.mt-jobs-forms__input(type="email" name="correo" placeholder="juanperez123@gmail.com")
+        input.mt-jobs-forms__input(type="email" id="correo" name="correo" placeholder="juanperez123@gmail.com")
         label.mt-jobs-forms__label Cargo
-        select.mt-jobs-forms__select(name="cargo")
+        select.mt-jobs-forms__select(id="cargo" name="cargo")
           option.mt-jobs-forms__select-option(value="") Seleccione
           option.mt-jobs-forms__select-option(value="cargo1") Cargo 1
           option.mt-jobs-forms__select-option(value="cargo2") Cargo 2
           option.mt-jobs-forms__select-option(value="cargo3") Cargo 3
         div.mt-jobs__btn
-          input.mt-btn.mt-jobs__btn-selection(type="submit", value="Envia por whatsapp")
-          
+          input.mt-btn.mt-jobs__btn-selection(type="submit", value="Enviar información")
+  script(src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js")
+  script(src="https://cdn.emailjs.com/dist/email.min.js")
+  script(type="module" src="/scripts/script-email.js")
+  link(rel="stylesheet", href="/styles/_jobs-page.css")
