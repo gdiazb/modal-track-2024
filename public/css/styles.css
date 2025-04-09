@@ -962,7 +962,7 @@ template {
     font-size: 3.125rem;
   }
 }
-.mt-main-container {
+.mt-main-container_oc {
   padding: 0 20px;
 }
 
@@ -994,6 +994,11 @@ template {
   padding: 40px 0;
 }
 
+/* Mision y vision */
+.mt-main-container_mv {
+  padding: 0 19px 0 20px;
+}
+
 .mt-oc-achievements__subtitle {
   font-size: 22px;
   font-size: 1.375rem;
@@ -1011,8 +1016,15 @@ template {
   line-height: 30px;
 }
 
+/* Principios organizacionales */
+.mt-oc-values {
+  display: grid;
+}
+
 .mt-oc-values__group {
-  padding-bottom: 80px;
+  width: 100%;
+  max-width: 351px;
+  margin: 0 auto;
 }
 
 .mt-oc-values__title {
@@ -1020,7 +1032,14 @@ template {
   font-size: 1.5rem;
   font-family: "Inter", sans-serif;
   color: #111827;
-  padding: 40px 0 27px;
+  padding: 40px 45px 30px 0;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.mt-oc-values__item {
+  overflow: hidden;
+  border-top: 1px solid #DFE4EA;
 }
 
 .mt-oc-values__item-subtitle {
@@ -1028,7 +1047,39 @@ template {
   font-size: 1rem;
   font-family: "Inter", sans-serif;
   color: #111827;
-  padding-bottom: 25px;
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+.mt-oc-values__item-subtitle:hover {
+  background-color: #ececec;
+}
+
+.mt-oc-values__item-subtitle::after {
+  content: "v";
+  font-size: 14px;
+  color: #DFE4EA;
+  transition: transform 0.3s ease;
+}
+
+.mt-oc-values__item.active .mt-oc-values__item-subtitle::after {
+  transform: rotate(180deg);
+}
+
+.mt-oc-values__item-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  background: #fff;
+  padding-top: 25px;
 }
 
 .mt-oc-values__item-text {
@@ -1037,15 +1088,36 @@ template {
   font-family: "Inter", sans-serif;
   color: #4B5563;
   padding-bottom: 20px;
-  line-height: 30px;
+}
+
+.mt-oc-values__item.active .mt-oc-values__item-content {
+  max-height: 150px;
 }
 
 @media only screen and (min-width: 1024px) {
+  .mt-main-wraper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 51px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+  div.mt-main-container_oc {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+  .mt-oc-hero__image {
+    grid-column: 1/1;
+    grid-row: 2/2;
+  }
+  .mt-main-container_mv {
+    grid-column: 2/2;
+    grid-row: 1/3;
+  }
   .mt-content--our-company {
     padding-top: 60px;
-  }
-  .mt-main-wraper {
-    padding: 0 64px;
   }
   .mt-oc-title {
     padding-bottom: 20px;
@@ -1067,31 +1139,63 @@ template {
     font-size: 18px;
     font-size: 1.125rem;
   }
+  /* Principios organizacionales en desktop */
+  .mt-oc-values {
+    background-image: url("..assets/images/our-company/rayas.svg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 65px 80px 64px;
+  }
   .mt-oc-values__group {
-    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 140px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   .mt-oc-values__title {
     font-size: 30px;
     font-size: 1.875rem;
     padding-bottom: 30px;
+    margin: 0 auto 0 0;
+  }
+  .mt-oc-values__item {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding-bottom: 80px;
+    padding-top: 0;
   }
   .mt-oc-values__item-subtitle {
     font-size: 16px;
     font-size: 1rem;
     padding-bottom: 12px;
+    font-weight: bold;
+    background: transparent;
+    cursor: default;
+    padding: 0 0 12px;
   }
   .mt-oc-values__item-text {
     font-size: 16px;
     font-size: 1rem;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
+  }
+  .mt-oc-values__item-content {
+    border-top: 0;
+    padding-top: 0px;
+  }
+  .mt-oc-values__item-subtitle::after {
+    content: none;
   }
 }
 .mt-content--our-services {
   padding-top: 36px;
 }
 
-.mt-os-hero {
-  padding: 0px 36px 35px 19px;
+.mt-os-hero-os {
+  padding: 0px 19px 0 20px;
 }
 
 .mt-os-hero__title {
@@ -1113,20 +1217,40 @@ template {
 
 .mt-os-hero__image {
   width: 100%;
-  max-width: 427px;
   height: auto;
   padding-top: 35px;
+  overflow: visible;
+}
+
+.mt-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .mt-os-card-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding: 50px 27px 50px 26px;
+  scroll-behavior: smooth;
 }
 
 .mt-os-card-grid__item {
-  padding: 30px 30px 0;
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+  padding: 30px 30px 0 30px;
   border: 1px solid #D2D2D2;
   border-radius: 13px;
   background-color: #F9F9FA;
+  min-width: 321px;
+  max-width: 337px;
 }
 
 .mt-os-card-grid__title {
@@ -1154,6 +1278,15 @@ template {
   .mt-content--our-services {
     padding-top: 53px;
   }
+  .mt-os-hero {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 64px;
+  }
+  div.mt-os-hero-os {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
   .mt-os-hero__title {
     font-size: 50px;
     font-size: 3.125rem;
@@ -1170,9 +1303,14 @@ template {
     max-width: 613px;
     height: auto;
     padding-bottom: 90px;
+    grid-column: 2/2;
+    grid-row: 1/1;
   }
   .mt-os-card-grid {
     padding-bottom: 90px;
+  }
+  .mt-os-card-grid__item {
+    flex: 0 0 30%;
   }
   .mt-os-card-grid__title {
     padding-bottom: 20px;
@@ -1386,6 +1524,189 @@ template {
     grid-column: 1/3;
     grid-row: 2/3;
     border-radius: 8px;
+  }
+}
+.mt-cp-contact {
+  background-color: #fff;
+  width: 100%;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.mt-cp-contact__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "Inter", sans-serif;
+  color: #C80D12;
+  padding: 35px 101px 0 20px;
+}
+
+.mt-cp-contact__subtitle {
+  font-size: 40px;
+  font-size: 2.5rem;
+  font-family: "Inter", sans-serif;
+  color: #111827;
+  padding: 0 0 20px 20px;
+}
+
+.mt-cp-contact__text-mobile {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  color: #111827;
+  padding: 20px 0 40px 19px;
+  line-height: 26px;
+}
+
+.mt-cp-contact__text-desktop {
+  display: none;
+}
+
+.mt-cp-means-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 20px 60px 19px;
+  align-items: center;
+}
+
+.mt-cp-means-contact__whatsapp {
+  background-color: #F9F9FA;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #DFE4EA;
+  width: 100%;
+  max-width: 351px;
+  max-height: 0 auto;
+}
+
+.mt-cp-means-contact__call {
+  background-color: #F9F9FA;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #DFE4EA;
+  width: 100%;
+  max-width: 351px;
+  max-height: 0 auto;
+}
+
+.mt-cp-means-contact__email {
+  background-color: #F9F9FA;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #DFE4EA;
+  width: 100%;
+  max-width: 351px;
+  max-height: 0 auto;
+}
+
+.mt-cp-means-contact__title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  color: #111827;
+  padding: 30px 0 15px 20px;
+  text-align: left;
+}
+
+.mt-cp-means-contact__text {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  color: #111827;
+  padding: 0 20px 20px 20px;
+  text-align: left;
+  line-height: 24px;
+}
+
+.mt-contact__btn-selection {
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-left: auto;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .mt-cp-contact {
+    background-image: url("../assets/images/contact-page/contact.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .mt-cp-contact__title {
+    font-size: 20px;
+    font-size: 1.25rem;
+    padding: 131px 0 0 65px;
+    white-space: nowrap;
+    text-align: left;
+  }
+  .mt-cp-contact__subtitle {
+    font-size: 50px;
+    font-size: 3.125rem;
+    padding-left: 65px;
+    text-align: left;
+  }
+  .mt-cp-contact__text-mobile {
+    display: none;
+  }
+  .mt-cp-contact__text-desktop {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-family: "Inter", sans-serif;
+    color: #111827;
+    padding: 20px 0 132px 65px;
+    line-height: 30px;
+    display: block;
+    text-align: left;
+    max-width: 668px;
+  }
+  .mt-cta {
+    margin: 0%;
+  }
+  .mt-cp-means-contact {
+    display: grid;
+    justify-content: center;
+    margin-top: 90px;
+    gap: 70px;
+  }
+  .mt-cp-means-contact__whatsapp {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-content: center;
+    max-width: 457px;
+    display: block;
+  }
+  .mt-cp-means-contact__call {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: center;
+    max-width: 457px;
+  }
+  .mt-cp-means-contact__email {
+    max-width: 984px;
+    text-align: center;
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .mt-cp-means-contact__title {
+    font-size: 30px;
+    font-size: 1.875rem;
+    padding: 50px 0 30px 30px;
+    text-align: left;
+  }
+  .mt-cp-means-contact__text {
+    font-size: 18px;
+    font-size: 1.125rem;
+    padding: 0x 0px 30px 30px;
+    text-align: left;
+  }
+  .mt-contact__btn {
+    padding-top: 40px;
+    padding-bottom: 50px;
   }
 }
 .layout {

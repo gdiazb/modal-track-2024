@@ -13,7 +13,6 @@ block content
         p.mt-jobs-page__text Ofrecemos oportunidades de crecimiento, un ambiente de trabajo colaborativo y un salario competitivo. Si eres apasionado por la logística y buscas un lugar donde tu talento sea valorado, ¡te estamos buscando! Únete a nosotros y sé parte de la revolución del transporte de carga. ¡Aplica hoy y comienza tu viaje hacia una carrera gratificante y llena de posibilidades!
         div.mt-jobs-page__cont
           a.mt-btn.mt-hero__btn(href="#") Ver mas
-          img(src="assets/images/jobs-page/jobs-page-mobile.jpg", alt="Trabaja con nosotros", class="mt-jobs-page__image")     
       <img src="assets/images/jobs-page/jobs-page-mobile.jpg" alt="Imagen móvil" class="img-movil">
       <img src="assets/images/jobs-page/jobs-page-desktop-2.png" alt="Imagen 1 desktop" class="img-desktop-1">
     <img src="assets/images/jobs-page/jobs-page-desktop.png" alt="Imagen 2 desktop" class="img-desktop-2">
@@ -21,19 +20,23 @@ block content
       div.mt-jobs-forms__header
         h1.mt-jobs-forms__title Déjanos tus datos
         p.mt-jobs-forms__text Nos contactaremos contigo para conocerte y comenzar a transformar el transporte de carga juntos.
-      div.mt-jobs-forms__content    
-        form
-          label.mt-jobs-forms__label Nombre y apellido
-          input.mt-jobs-forms__input(type="text" placeholder="Juan Pérez")
-          label.mt-jobs-forms__label Número de celular
-          input.mt-jobs-forms__input(type="cel" placeholder="3011230000")
-          label.mt-jobs-forms__label Correo electrónico
-          input.mt-jobs-forms__input(type="email" placeholder="juanperez123@gmail.com")
-          label.mt-jobs-forms__label Cargo
-          select.mt-jobs-forms__select
-            option.mt-jobs-forms__select-option(value="") Seleccione
-            option.mt-jobs-forms__select-option(value="cargo1") Cargo 1
-            option.mt-jobs-forms__select-option(value="cargo2") Cargo 2
-            option.mt-jobs-forms__select-option(value="cargo3") Cargo 3
-          div.mt-jobs__btn
-            input(type="submit").mt-btn.mt-jobs__btn-selection(value="Envia por whatsapp")
+      div.mt-jobs-forms__content 
+       form(id="trabajaForm")
+        label.mt-jobs-forms__label Nombre y apellido
+        input.mt-jobs-forms__input(type="text" id="nombre" name="nombre" placeholder="Juan Pérez")
+        label.mt-jobs-forms__label Número de celular
+        input.mt-jobs-forms__input(type="text" id="celular" name="celular" placeholder="3011230000")
+        label.mt-jobs-forms__label Correo electrónico
+        input.mt-jobs-forms__input(type="email" id="correo" name="correo" placeholder="juanperez123@gmail.com")
+        label.mt-jobs-forms__label Cargo
+        select.mt-jobs-forms__select(id="cargo" name="cargo")
+          option.mt-jobs-forms__select-option(value="") Seleccione
+          option.mt-jobs-forms__select-option(value="cargo1") Cargo 1
+          option.mt-jobs-forms__select-option(value="cargo2") Cargo 2
+          option.mt-jobs-forms__select-option(value="cargo3") Cargo 3
+        div.mt-jobs__btn
+          input.mt-btn.mt-jobs__btn-selection(type="submit", value="Enviar información")
+  script(src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js")
+  script(src="https://cdn.emailjs.com/dist/email.min.js")
+  script(type="module" src="/scripts/script-email.js")
+  link(rel="stylesheet", href="/styles/_jobs-page.css")

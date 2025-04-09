@@ -11,7 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pug": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "firebase": "^11.6.0",
+    "firebase-admin": "^13.2.0",
+    "node-sass-middleware": "^1.1.0",
+    "pug": "^3.0.3",
     "sass": "^1.75.0"
   },
   "devDependencies": {
